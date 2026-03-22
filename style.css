@@ -253,30 +253,29 @@
   --md-blue-grey-700: #455A64;
   --md-blue-grey-800: #37474F;
   --md-blue-grey-900: #263238;
+  --font-main:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 }
 body{
     background-color: var(--md-blue-grey-400);
+    font-family: var(--font-main);
+    -webkit-font-smoothing:antialiased;
 }
-.nav_container{
-    display:flex;
-    width:100vw;
-    justify-content: center;
-}
+
 .main_design{
     display:flex;
     flex-direction:column;
-    background-color: wheat;
+    
 }
 header{
     display:flex;
-    justify-content: flex-start;
     color:var(--md-amber-50);
 
 }
 header h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color:var(--md-amber-50);
-    display: flex;
-    margin-left:1rem;
 
 }
 .punc_dec{
@@ -285,35 +284,55 @@ header h1{
 nav{
     display:flex;
     flex-direction: row;
-    color: var(--md-amber-50);
-    margin-left:1rem;
+    color: var(--md-amber-500);
+    
+}
+.nav_container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(38,50,56,0.8);
+    backdrop-filter:blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    padding:0;
     
     
-
 }
 nav li{
-    display:flex;
-    text-decoration: none;
+    cursor:pointer;
+    transition: color 0.3s ease;
+    margin: 1rem;
+    
 }
- nav>li,li{ 
-    display: flex;
-        
+nav li:hover{
+    color: var(--md-yellow-500);
+}
+nav ui li{
+    font-size: 0.9rem;
+    font-weight:500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--md-amber-200);
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+nav ul li:hover{
+    color: var(--md-amber-500);
+    text-shadow: 0 0 8px rgba(255,193,7,0.4);
 }
 @media screen and (min-width: 600px){
     .main_design{
         justify-content:center;
     }
     .punc_dec{
-        color:var(--md-amber-500);
+        
     }
 }
-@media screen and (min-width:375){
 
-    .main_design{
-        display:flex;
-    }
-    header h1{
-        justify-content: center;
-    }
-
-}
